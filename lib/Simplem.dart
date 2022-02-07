@@ -112,7 +112,7 @@ class MyApp extends StatelessWidget {
 }
 
 class _MapState extends State<Map> {
-  Completer<GoogleMapController> controller1;
+   Completer<GoogleMapController> controller1;
 
   //static LatLng _center = LatLng(-15.4630239974464, 28.363397732282127);
   static LatLng _initialPosition;
@@ -211,6 +211,7 @@ class _MapState extends State<Map> {
               initialCameraPosition: CameraPosition(
                 target: _initialPosition,
                 zoom: 18.4746,
+
               ),
               onMapCreated: _onMapCreated,
               tiltGesturesEnabled: false,
@@ -220,6 +221,8 @@ class _MapState extends State<Map> {
               compassEnabled: true,
               myLocationButtonEnabled: true,
               padding:EdgeInsets.only(top:180,right: 10),
+              buildingsEnabled: true,
+
 
             ),
           ),
